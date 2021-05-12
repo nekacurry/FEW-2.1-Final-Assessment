@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nekacurry/FEW-2.1-Final-Assessment#readme",
   "dependencies": {
-    "anneka-string-lib": "^1.0.2"
+    "anneka-string-lib": "^1.0.2",
+    "neka-date-lib": "^1.0.2"
   }
 }
