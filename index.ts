@@ -12,6 +12,12 @@ function Data() {
   const purchaseDate = new Date(data[0].purchased)
   console.log(`Purchased: ${months[purchaseDate.getMonth()]} ${purchaseDate.getDate()}, ${purchaseDate.getFullYear()}`)
 
+  // Challenge 3
+  const lastPayment = new D(data[0].lastpayment)
+  console.log(`Last Payment: ${lastPayment.when()}`)
+
+  // Challenge 4
+
 
 }
 
