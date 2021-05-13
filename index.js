@@ -1,8 +1,14 @@
+"use strict";
+exports.__esModule = true;
+var anneka_string_lib_1 = require("anneka-string-lib");
 var strLib = require('anneka-string-lib');
 var D = require('neka-date-lib');
 var data = require('./data.json');
 // Challenge Functions
 function formatPhone(num) {
+    if (anneka_string_lib_1.isEmpty(num) == true) {
+        return 'No number on file';
+    }
     var areaCode = num.slice(0, 3);
     var firstThree = num.slice(3, 6);
     var finalFour = num.slice(6);
@@ -28,3 +34,4 @@ function Data() {
     console.log("City: " + strLib.capitalizeWords(data[0].city));
 }
 Data();
+module.exports = { formatPhone: formatPhone };

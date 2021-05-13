@@ -1,3 +1,5 @@
+import { isEmpty } from "anneka-string-lib";
+
 const strLib = require('anneka-string-lib');
 const D = require('neka-date-lib')
 const data = require('./data.json');
@@ -5,11 +7,17 @@ const data = require('./data.json');
 // Challenge Functions
 
 function formatPhone(num : string) {
+
+  if (isEmpty(num) == true ) {
+    return 'No number on file'
+  }
+
   const areaCode: string = num.slice(0, 3)
   const firstThree: string = num.slice(3, 6)
   const finalFour: string = num.slice(6)
 
   return `(${areaCode}) ${firstThree}-${finalFour}`
+
 }
 
 // Challenge Outputs
@@ -41,3 +49,5 @@ function Data() {
 }
 
 Data()
+
+module.exports = {formatPhone}
