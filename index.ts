@@ -19,6 +19,9 @@ function Data() {
   // Challenge 1
   console.log(`${strLib.capitalizeWords(data[0].first_name)} ${strLib.capitalizeWords(data[0].last_name)}`)
 
+  // Car Make/Model
+  console.log(`${strLib.capitalizeWords(data[0].make)} ${strLib.capitalizeWords(data[0].model)}`) 
+
   // Challenge 2
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] 
   const purchaseDate = new Date(data[0].purchased)
@@ -30,6 +33,9 @@ function Data() {
 
   // Challenge 4
   console.log(`Phone Number: ${formatPhone(data[0].phone)}`)
+
+  // City
+  console.log(`City: ${strLib.capitalizeWords(data[0].city)}`)
 
 
 }
