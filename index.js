@@ -1,7 +1,16 @@
 var strLib = require('anneka-string-lib');
 var D = require('neka-date-lib');
 var data = require('./data.json');
+// Challenge Functions
+function formatPhone(num) {
+    var areaCode = num.slice(0, 3);
+    var firstThree = num.slice(3, 6);
+    var finalFour = num.slice(6);
+    return "(" + areaCode + ") " + firstThree + "-" + finalFour;
+}
+// Challenge Outputs
 function Data() {
+    console.log("---------- Purchase Info ----------");
     // Challenge 1
     console.log(strLib.capitalizeWords(data[0].first_name) + " " + strLib.capitalizeWords(data[0].last_name));
     // Challenge 2
@@ -11,5 +20,7 @@ function Data() {
     // Challenge 3
     var lastPayment = new D(data[0].lastpayment);
     console.log("Last Payment: " + lastPayment.when());
+    // Challenge 4
+    console.log("Phone Number: " + formatPhone(data[0].phone));
 }
 Data();
